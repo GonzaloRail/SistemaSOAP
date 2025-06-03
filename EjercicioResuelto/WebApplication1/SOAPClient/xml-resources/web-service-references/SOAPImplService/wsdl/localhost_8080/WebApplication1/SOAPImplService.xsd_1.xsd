@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://my.org/ns/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://my.org/ns/">
+
+<xs:element name="addProduct" type="tns:addProduct"/>
+
+<xs:element name="addProductResponse" type="tns:addProductResponse"/>
+
+<xs:element name="addUser" type="tns:addUser"/>
+
+<xs:element name="addUserResponse" type="tns:addUserResponse"/>
+
+<xs:element name="getProducts" type="tns:getProducts"/>
+
+<xs:element name="getProductsResponse" type="tns:getProductsResponse"/>
+
+<xs:element name="getUsers" type="tns:getUsers"/>
+
+<xs:element name="getUsersResponse" type="tns:getUsersResponse"/>
+
+<xs:element name="product" type="tns:product"/>
+
+<xs:element name="user" type="tns:user"/>
+
+<xs:complexType name="addProduct">
+<xs:sequence>
+<xs:element name="arg0" type="tns:product" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="product">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="price" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addProductResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="addUser">
+<xs:sequence>
+<xs:element name="arg0" type="tns:user" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="user">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addUserResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getUsers">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getUsersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:user" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getProducts">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getProductsResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
